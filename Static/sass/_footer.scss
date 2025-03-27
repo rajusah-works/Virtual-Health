@@ -1,0 +1,241 @@
+.footer-area {
+  background-color: #0c2e60;
+  padding: 5px 0;
+
+  .single-footer-widget {
+    margin-bottom: 10px;
+
+    @media (max-width: 991px) {
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #ffffff;
+      font-size: 15px;
+      @media (min-width: 768px) and (max-width: 1024px) {
+        font-size: 13px;
+      }
+
+      @media (min-width: 600px) and (max-width: 768px) {
+        font-size: 13px;
+      }
+
+      @media (min-width: 320px) and (max-width: 600px) {
+        font-size: 13px;
+      }
+    }
+
+    h4 {
+      color: #ffffff;
+      font-style: inherit;
+      margin-bottom: 30px;
+      font-weight: 700;
+      font-size: 22px;
+
+      @media (max-width: 1024px) {
+        font-size: 14px;
+      }
+
+      @media (max-width: 991px) {
+        margin-bottom: 12px;
+      }
+    }
+
+    ul {
+      li {
+        margin-bottom: 10px;
+        font-size: 15px;
+        @media (min-width: 768px) and (max-width: 1024px) {
+          font-size: 13px;
+        }
+
+        @media (min-width: 600px) and (max-width: 768px) {
+          font-size: 13px;
+        }
+
+        @media (min-width: 320px) and (max-width: 600px) {
+          font-size: 13px;
+        }
+
+        a {
+          color: #ffffff;
+          transition: color 0.5s;
+
+          &:hover {
+            color: #9af2e5;
+          }
+        }
+      }
+    }
+
+    .form-wrap {
+      margin-top: 25px;
+      position: relative;
+      @media (max-width: 1024px) {
+        display: none;
+      }
+    }
+
+    input {
+      height: 48px;
+      border: none;
+      width: 100% !important;
+      font-weight: 400;
+      background: transparent;
+      padding-left: 20px;
+      border-radius: 0;
+      font-size: 14px;
+      padding: 10px;
+      border: 1px solid #e1e1e1 !important;
+      color: #999999;
+
+      &:focus {
+        outline: none;
+        box-shadow: none;
+      }
+    }
+
+    .click-btn {
+      background-color: #9af2e5;
+      color: #ffffff;
+      border-radius: 5px;
+      border: 0;
+      position: absolute;
+      right: 5px;
+      width: 40px;
+      height: 40px;
+      line-height: 30px;
+      text-align: center;
+      display: inline-block;
+
+      &:focus {
+        outline: none;
+        box-shadow: none;
+      }
+    }
+  }
+
+  .footer_logo {
+    margin-bottom: 30px;
+    display: inline-block;
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+      height: 6rem;
+      width: 7rem;
+    }
+
+    @media (min-width: 600px) and (max-width: 768px) {
+      height: 5rem;
+      width: 6rem;
+    }
+
+    @media (min-width: 320px) and (max-width: 600px) {
+      height: 6rem;
+      width: 7rem;
+      margin-bottom: 2px;
+    }
+  }
+
+  .social_logo {
+    margin-top: 20px;
+    font-size: larger;
+
+    a {
+      color: #b8bcbf;
+      margin-right: 10px;
+
+      &:hover {
+        color: #ffffff;
+      }
+    }
+  }
+
+  .footer-bottom {
+    margin-top: 70px;
+
+    @media (max-width: 991px) {
+      margin-top: 20px;
+    }
+
+    p {
+      color: #ffffff;
+
+      a {
+        color: #9af2e5;
+      }
+    }
+
+    .footer-social {
+      text-align: center;
+
+      @media (max-width: 991px) {
+        text-align: left;
+        margin-top: 30px;
+      }
+
+      a {
+        background: rgba(255, 255, 255, 0.15);
+        margin-left: 3px;
+        width: 32px;
+        color: #ffffff;
+        display: inline-grid;
+        text-align: center;
+        height: 32px;
+        align-content: center;
+        transition: background 0.5s;
+
+        &:hover {
+          background: #9af2e5;
+          color: #0c2e60;
+        }
+
+        i,
+        span {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .copyright_part {
+    background-color: #0d1820;
+    padding: 26px 0px;
+
+    a {
+      color: #9af2e5;
+    }
+
+    .footer-social {
+      margin-top: 20px;
+
+      a {
+        margin-left: 20px;
+        color: #ffffff;
+        text-align: center;
+
+        &:hover {
+          color: #9af2e5;
+        }
+
+        i {
+          &:hover {
+            color: #9af2e5;
+          }
+        }
+
+        [class^="ti-"],
+        [class*=" ti-"] {
+          line-height: 0;
+        }
+      }
+    }
+
+    .footer-text {
+      text-align: center;
+
+      @media (max-width: 991px) {
+        text-align: center;
+      }
+    }
+  }
+}
