@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detailed Report PDF</title>
+</head>
+<body>
+    {% for data in user_data %}
+        <h1 align="center" style="font-size: 25px;">{{data.fname}} {{data.lname}}'s Report</h1>
+        <br>
+        <table style="font-size: 18px;">
+            <tr>
+                <th><h5>Name: {{data.fname}} {{data.lname}}</h5></th>
+                <th><h5>Patient ID:  {{ data.id }}</h5></th>
+            </tr>
+            <tr>
+                <th><h5>Phone: {{data.phone}}</h5></th>
+                <th><h5>Email: {{data.email}}</h5></th>
+            </tr>
+        </table>
+    {% endfor %}
+    <hr><br>
+
+    {% for data in user_data %}
+        <table>
+            <thead align="center">
+                <tr>
+                    <th colspan="2"><h1 style="font-size: 20px; color: crimson;">Symptoms</h1></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td align="center"><h3>{{data.symp1}}</h3></td>
+                    <td align="center"><h3>{{data.symp2}}</h3></td>
+                </tr>
+                <tr>
+                    <td align="center"><h3>{{data.symp3}}</h3></td>
+                    <td align="center"><h3>{{data.symp4}}</h3></td>
+                </tr>
+            </tbody>
+        </table>
+    {% endfor %}
+    <hr>
+    {% for data in user_data %}
+        {% for dis in disease %}
+                {% if dis.d_id == data.id %}
+                    <h3 align="center" style="font-size: 24px;">Probable Disease: <span style="color: rgb(18, 179, 0);">{{ dis.disease }}</span></h3>
+                {% endif %}
+            {% endfor %}
+    {% endfor %}
+    <hr>
+
+
+    {% for data in user_data %}
+    <h1 style="font-size: 20px;" align="center">Precautions</h1>
+    <li>
+        {% for precaution in precautions %}
+            {% if precaution.p_id == data.id %}
+                <ol><p style="font-size: 14px;" align="center">{{ precaution.precaution }}</p></ol>
+            {% endif %}
+        {% endfor %}
+    </li>
+    {% endfor %}
+    <hr>
+
+
+    {% for data in user_data %}
+    <h1 style="font-size: 20px;" align="center">Medications</h1>
+    <li>
+        {% for medication in medications %}
+            {% if medication.m_id == data.id %}
+                <ol><p style="font-size: 14px;" align="center">{{ medication.medication }}</p></ol>
+            {% endif %}
+        {% endfor %}
+    </li>
+    {% endfor %}
+    <hr>
+
+
+    {% for data in user_data %}
+    <h1 style="font-size: 20px;" align="center">Diet</h1>
+    <li>
+        {% for items in workout %}
+            {% if items.w_id == data.id %}
+                <ol><p style="font-size: 14px;" align="center">{{ items.workout }}</p></ol>
+            {% endif %}
+        {% endfor %}
+    </li>
+    {% endfor %}
+    <hr>
+
+    <p align="center">Report Download and Authorised from HealthMap</p>
+</body>
+</html>
